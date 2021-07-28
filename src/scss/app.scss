@@ -1,0 +1,22 @@
+@import 'variables';
+@import 'libs/normalize';
+@import 'components/all';
+@import 'fonts';
+
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  background-color: $white;
+}
+
+.container {
+  max-width: $container-width;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.content {
+
+  margin: 4rem 0 0;
+}

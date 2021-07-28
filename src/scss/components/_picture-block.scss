@@ -1,0 +1,28 @@
+@import '../variables';
+
+.picture {
+
+
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    margin: 1rem;
+    border: 1px solid $main-border;
+    border-radius: 1rem;
+
+    img {
+      width: 100%;
+      height: 200px;
+      border-radius: 1rem;
+      object-fit: fill;
+      flex-grow: 1;
+
+      &:not(:nth-of-type(1)) {
+        margin-top: 5px;
+      }
+
+    }
+  }
+}
