@@ -49,7 +49,7 @@ export const getPictures = (request: (url: string) => Promise<picturePromiseType
                 for (let res of responses) {
                     if (!res?.data.image_url) {
                         await new Promise(resolve => setTimeout(resolve, 2000 * i))
-                        await dispatch(setMessage(true, `По этому тегу "${tags[i]}" ничего не найдено!`))
+                        dispatch(setMessage(true, `По этому тегу "${tags[i]}" ничего не найдено!`))
                     }
                     if (res && res.data.image_url) {
                         dispatch(setPicturesGroup(res.data.image_url, tags[i]))
