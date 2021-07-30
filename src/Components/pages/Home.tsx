@@ -1,25 +1,25 @@
-import React, {useEffect} from "react";
-import {usePicturesActions} from "../../hooks/useActions.hook";
-import {useRequest} from "../../hooks/useRequest.hook";
-import PicturesAll from "../Pictures/PicturesAll/PicturesAll";
+import React from "react";
+import PicturesBlock from "../Pictures/PicturesBlock";
 import PicturesGroup from "../Pictures/PicturesGrouped/PicturesGroup";
+import {useTypesSelector} from "../../hooks/useTypesSelector.hook";
 
 
 function Home() {
 
-    const {getPictures} = usePicturesActions()
-    const {request} = useRequest()
-    useEffect(() => {
-        getPictures(request, ['cat', 'cat', 'dog', 'cow'])
-    }, [])
+    const grouped = useTypesSelector(({assort}) => assort.grouped)
+    const allPictures = useTypesSelector(({picturesAll}) => picturesAll.pictures)
 
     return (
-        <section className="container">
-            <PicturesAll />
-            {/*<PicturesGroup />*/}
-
+        <section className="home">
+            <div className="container">
+                <div className="home__inner">
+                    {grouped
+                        ?  <PicturesGroup />
+                        :  allPictures && allPictures.map((pictureBlock, index) => <PicturesBlock key={`pictureBlock-${index}`} pictureBlock={pictureBlock} />)
+                    }
+                </div>
+            </div>
         </section>
-
     )
 }
 

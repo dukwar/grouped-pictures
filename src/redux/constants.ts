@@ -1,3 +1,6 @@
 export const SET_PICTURES_GROUP = 'SET_PICTURES_GROUP'
 export const SET_PICTURES_ALL = 'SET_PICTURES_ALL'
+export const SET_GROUPED = 'SET_GROUPED'
+export const SET_INPUT_TEXT = 'SET_INPUT_TEXT'
+export const SET_MESSAGE = 'SET_MESSAGE'
 export const SET_FETCHING = 'SET_FETCHING'

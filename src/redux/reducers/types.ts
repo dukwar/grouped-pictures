@@ -4,6 +4,11 @@ export interface picturePromiseType {
     }
 }
 
+export interface allPicturesType {
+    img: string,
+    tag: string
+}
+
 export interface picturesGroupType {
     [key: string]: itemsType
 }

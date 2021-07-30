@@ -1,39 +1,20 @@
 @import "../variables";
 
+.home {
 
-table {
-  p {
-    color: $white;
-    transition: all .2s linear;
-  }
-
-  tr {
-
-    th {
-      padding: 0 0;
-    }
-
-    td {
-      border: 1px solid $main-border;
-      text-align: center;
-      padding: 1rem;
-    }
-
+  &__inner {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
   }
 }
 
-@media (max-width: 550px) {
-  table {
-    p {
-      font-size: .8rem;
-    }
-  }
-}
+@media (max-width: 768px) {
+  .home {
 
-@media (max-width: 425px) {
-  table {
-    p {
-      font-size: .55rem;
+    &__inner {
+      justify-content: center;
     }
   }
+
 }

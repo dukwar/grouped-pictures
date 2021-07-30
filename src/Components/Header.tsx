@@ -16,11 +16,11 @@ function Header() {
                         <div className="header__data">
 
                             <div className="header__search">
-                                <Form/>
+                                <Form />
                             </div>
-                            {/*<div className="header__info">*/}
-                            {/*    <p>Enter numbers from 1 to 20 through "," or ";" </p>*/}
-                            {/*</div>*/}
+                            <div className="header__info">
+                                <p>Enter tags through "," </p>
+                            </div>
                         </div>
                     </div>
                 </div>

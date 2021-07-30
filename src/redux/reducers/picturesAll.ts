@@ -1,9 +1,10 @@
 import {SET_PICTURES_ALL} from "../constants";
 import {picturesActionType} from "../actions/types";
+import {allPicturesType} from "./types";
 
 
 const initialState = {
-    pictures: [] as string[][],
+    pictures: [] as allPicturesType[][],
 }
 
 
